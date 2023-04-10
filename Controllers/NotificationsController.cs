@@ -67,7 +67,7 @@ public class NotificationsController : ControllerBase
         }
     }
 
-    [Route("enviar-sms-nueva-clave")]
+    [Route("enviar-sms")]
     [HttpPost]
     public async Task<ActionResult> EnviarSMSNuevaClave(ModelSMS data)
     {

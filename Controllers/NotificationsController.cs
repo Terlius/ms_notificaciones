@@ -58,7 +58,7 @@ public class NotificationsController : ControllerBase
         var response = await client.SendEmailAsync(msg);
         if (response.StatusCode == System.Net.HttpStatusCode.Accepted)
         {
-            Console.Write("Hola Mundo Sobre Linea");
+           
             return Ok("Correo enviado a la dirección: " + data.correoDestino);
         }
         else
@@ -125,7 +125,9 @@ public async Task<ActionResult> SendEmail2FA(ModelEmail data)
     var response = await client.SendEmailAsync(msg);
     if (response.StatusCode == System.Net.HttpStatusCode.Accepted)
     {
+        Console.Write("GG");
         return Ok("Correo 2FA enviando a : " + data.correoDestino);
+         
     }
     else
     {
